@@ -38,7 +38,7 @@ posts_schema = PostSchema(many=True)
 
 @app.route("/", methods =["POST","GET"])
 def home():
-    return "API"
+    return "Hello api"
 
 @app.route("/post/add", methods =["POST"])
 def add_post():
