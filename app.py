@@ -35,6 +35,11 @@ class PostSchema(ma.Schema):
 post_schema = PostSchema()
 posts_schema = PostSchema(many=True)
 
+
+@app.route("/", methods =["POST"])
+def home():
+    return "API"
+
 @app.route("/post/add", methods =["POST"])
 def add_post():
     title = request.json.get("title")
